@@ -39,3 +39,7 @@ npm install --save-dev redux-devtools redux-devtools-dock-monitor redux-devtools
 ## Configuration
 
 TODO
+
+## Devtools
+
+use `ctrl+h` for opening the sidebar.
