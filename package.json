@@ -8,6 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Quentin Favrie <quentin.favrie@gmail.com>",
+  "repository": "tseho/react-redux-app-container",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.1.2",
