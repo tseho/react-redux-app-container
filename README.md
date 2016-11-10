@@ -27,17 +27,13 @@ You can now follow the installation steps.
 
 ## Installation
 
-Dependencies:
 ```
-npm install --save react-redux react-router@^2.8.1 react-router-redux redux redux-thunk
-```
-
-```
-npm install --save react-redux-app-container
+npm install --save react-redux react-router@^2.8.1 react-router-redux redux redux-thunk react-redux-app-container
 ```
 
+**Optional**, the devtools:
 ```
-npm install --save-dev react-redux-app-container-devtools
+npm install --save-dev redux-devtools redux-devtools-dock-monitor redux-devtools-log-monitor react-redux-app-container-devtools
 ```
 
 ## Configuration
