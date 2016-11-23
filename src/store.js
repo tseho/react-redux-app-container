@@ -23,10 +23,11 @@ export const injectReducer = (store, { key, reducer }) => {
 }
 
 export const createStore = (initialState = {}, reducers = {}, middlewares = {}, enhancers = {}) => {
+    const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
     const store = createReduxStore(
         makeRootReducer(reducers),
         initialState,
-        compose(
+        composeEnhancers(
             applyMiddleware(...middlewares),
             ...enhancers
         )
