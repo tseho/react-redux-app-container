@@ -3,43 +3,36 @@ react-redux-app-container
 
 ## Prerequisites
 
-react-redux-app-container is expected to be used with create-react-app,
-the documentation will only explain it this way.
+react-redux-app-container is expected to be used with create-react-app.
 
 Make sure you have `create-react-app` installed.
 ```
 npm install -g create-react-app
-```
-And create a react app with
-```
-create-react-app hello-world
-```
-
-You can also use the forked version of create-react-app with the library
-already configured.
-(Configured but **not** installed ! You still have to follow the
-installation steps)
-```
-create-react-app hello-world --scripts-version tcra
 ```
 
 You can now follow the installation steps.
 
 ## Installation
 
+### 1. Lazy
+Create your project using the fork of react-scripts with the library already installed and configured.
 ```
-npm install --save react-redux react-router@^2.8.1 react-router-redux redux redux-thunk react-redux-app-container
-```
-
-**Optional**, the devtools:
-```
-npm install --save-dev redux-devtools redux-devtools-dock-monitor redux-devtools-log-monitor react-redux-app-container-devtools
+create-react-app hello-world --scripts-version tcra
 ```
 
-## Configuration
+### 2. Manually
+Create a react app with
+```
+create-react-app hello-world
+```
 
-TODO
+Install the package inside your created project:
+```
+npm install --save react-redux-app-container
+```
+
+Todo: usage documentation.
 
 ## Devtools
 
-use `ctrl+h` for opening the sidebar.
+The [Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension) is automatically recognized.
