@@ -4,12 +4,13 @@ import {
     compose,
     createStore as createReduxStore
 } from 'redux'
+import isEmpty from 'lodash.isempty'
 
 const makeRootReducer = (reducers, asyncReducers) => {
     // Redux + combineReducers always expect at least one reducer, if reducers
     // and asyncReducers are empty, we define an useless reducer function
     // returning the state
-    if (!reducers && !asyncReducers) { return (state) => state }
+    if (isEmpty(reducers) && isEmpty(asyncReducers)) { return (state) => state }
 
     return combineReducers({
         ...reducers,
