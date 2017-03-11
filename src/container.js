@@ -1,30 +1,26 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import { Router, browserHistory } from 'react-router'
+
+// Private component, see https://github.com/ctrlplusb/react-async-component/issues/20
+import AsyncComponentProvider from 'react-async-component/commonjs/AsyncComponentProvider'
+import createExecContext from './Async/createExecContext'
 
 class ReactReduxAppContainer extends React.Component {
     render() {
-        let { store, history, routes, children } = this.props
+        let { store, children } = this.props
         return (
-            <Provider store={store}>
-                <div>
-                    <Router history={history} children={routes} />
+            <AsyncComponentProvider execContext={createExecContext()}>
+                <Provider store={store}>
                     {children}
-                </div>
-            </Provider>
+                </Provider>
+            </AsyncComponentProvider>
         )
     }
 }
 
 ReactReduxAppContainer.propTypes = {
-    store: React.PropTypes.object.isRequired,
-    history: React.PropTypes.object,
-    routes: React.PropTypes.object.isRequired,
-    children: React.PropTypes.element
-}
-
-ReactReduxAppContainer.defaultProps = {
-    history: browserHistory
+    children: React.PropTypes.element.isRequired,
+    store: React.PropTypes.object.isRequired
 }
 
 export default ReactReduxAppContainer
