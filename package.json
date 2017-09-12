@@ -18,22 +18,19 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-1": "^6.3.13",
     "babel-register": "^6.4.3",
-    "lodash.isempty": "^4.4.0",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "react-redux": "^4.4.5",
-    "react-router-dom": "^4.0.0",
-    "redux": "^3.6.0"
+    "react-dom": "^15.3.2"
   },
   "dependencies": {
-    "lodash.isempty": "^4.4.0",
+    "lodash.isempty": "^4.0.0",
+    "prop-types": "^15.5.0",
     "react-async-component": "^0.2.2",
-    "react-redux": "^4.4.5",
+    "react-redux": "^5.0.0",
     "react-router-dom": "^4.0.0",
-    "redux": "^3.6.0",
-    "redux-thunk": "^2.1.0"
+    "redux": "^3.0.0",
+    "redux-thunk": "^2.0.0"
   },
   "peerDependencies": {
-    "react": "^15.3.2"
+    "react": "^15.0.0-0 || ^16.0.0-0"
   }
 }
