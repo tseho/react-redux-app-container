@@ -24,9 +24,7 @@
   "dependencies": {
     "lodash.isempty": "^4.0.0",
     "prop-types": "^15.5.0",
-    "react-async-component": "^0.2.2",
     "react-redux": "^5.0.0",
-    "react-router-dom": "^4.0.0",
     "redux": "^3.0.0",
     "redux-thunk": "^2.0.0"
   },
