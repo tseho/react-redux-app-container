@@ -1,37 +1,48 @@
 react-redux-app-container
 =========================
 
-## Prerequisites
-
-react-redux-app-container is expected to be used with create-react-app.
-
-Make sure you have `create-react-app` installed.
-```
-npm install -g create-react-app
-```
-
-You can now follow the installation steps.
-
 ## Installation
 
-### 1. Lazy
-Create your project using the fork of react-scripts with the library already installed and configured.
-```
-create-react-app hello-world --scripts-version tcra
-```
-
-### 2. Manually
-Create a react app with
-```
-create-react-app hello-world
-```
-
-Install the package inside your created project:
+Install the package:
 ```
 npm install --save react-redux-app-container
 ```
 
-Todo: usage documentation.
+## Usage
+
+```
+// index.js
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { ReactReduxAppContainer } from 'react-redux-app-container'
+import createStore from './store'
+import App from './App'
+
+const store = createStore()
+
+ReactDOM.render(
+    <ReactReduxAppContainer store={store}>
+        <App />
+    </ReactReduxAppContainer>,
+    document.getElementById('root')
+)
+```
+
+```
+// store.js
+
+import { createStore } from 'react-redux-app-container'
+
+export default () => {
+    const initialState = {}
+    const reducers = {}
+    const middlewares = []
+    const enhancers = []
+
+    return createStore(initialState, reducers, middlewares, enhancers)
+}
+```
 
 ## Devtools
 
