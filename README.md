@@ -47,3 +47,16 @@ export default () => {
 ## Devtools
 
 The [Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension) is automatically recognized.
+
+If you need to pass [options](https://github.com/zalmoxisus/redux-devtools-extension/blob/master/docs/API/Arguments.md#options) to the devtools extension, you can pass them in the 5th parameter:
+
+```
+// store.js
+// ...
+    const devtoolsOptions = {
+        name: 'foo'
+    }
+
+    return createStore(initialState, reducers, middlewares, enhancers, devtoolsOptions)
+}
+```
