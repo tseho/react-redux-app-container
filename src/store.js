@@ -24,8 +24,8 @@ export const injectReducer = (store, { key, reducer }) => {
 }
 
 export const createStore = (initialState = {}, reducers = {}, middlewares = {}, enhancers = {}, devtoolsOptions = {}) => {
-    const composeEnhancers = typeof window !== 'undefined'
-        ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(devtoolsOptions) || compose
+    const composeEnhancers = (typeof window !== 'undefined' && typeof window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ !== 'undefined')
+        ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(devtoolsOptions)
         : compose
     const store = createReduxStore(
         makeRootReducer(reducers),
